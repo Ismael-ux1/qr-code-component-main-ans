@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+
+:root{
+    --col__page: hsl(200, 95%, 14%);
+    --col__heading: hsla(217, 44%, 22%, 1);
+    --col__text-lead: hsla(219, 15%, 55%, 1);
+    --col__white: hsl(0, 0%, 100%);
+    --ff__bold: 700;
+}
+
+@keyframes movein{
+    from{
+        bottom: -15rem;
+    }
+    to{
+        bottom: -5rem;
+    }
+}
+
+@keyframes fade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+h1{
+    font-size: 22px;
+}
+
+p{
+    font-size: 15px;
+}
+
+*::before,
+*::after,
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: none;
+    border: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body{
+    height: 100%;
+}
+
+main{
+    min-height: 100%;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 85px 28px;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.qr{
+    position: relative;
+    top: 0;
+    max-width: 320px;
+    min-height: 31.06rem;
+    background-color: var(--col__white);
+    border-radius: 1.25rem;
+    padding: 16px;
+    box-shadow: 10px 25px 25px rgba(0, 0, 0, 0.3);
+}
+
+.qr__image{
+    min-height: 18rem;
+    background-image: url("image-qr-code.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0.625rem;
+}
+
+.qr__text{
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-family: 'Outfit', sans-serif;
+    text-align: center;
+    padding: 0 16px;
+}
+
+.qr__text-heading{
+    font-weight: var(--ff__bold);
+    color: var(--col__heading);
+    line-height: 28px;
+}
+
+.qr__text-lead{
+    color: var(--col__text-lead);
+    line-height: 19px;
+}
+
+.copy{
+    background: white;
+    max-width: 300px;
+    border-radius: 0.31rem;
+    width: 100%;
+    padding: 20px;
+    font-family: 'Outfit', sans-serif;
+    position: absolute;
+    bottom: -15rem;
+    left: 0.625rem;
+    transition: all .5s ease-in-out;
+    animation: movein 1s ease-in-out forwards;
+}
+
+a{
+    color: #ff595e;
+    border: 3px solid black;
+    padding: 10px;
+    text-decoration: none;
+    margin-left: 5rem;
+    text-align: center;
+}
+
+a:hover{
+    background-color: goldenrod;
+    color: var(--col__white);
+    border-color: inherit;
+    font-weight: var(--ff__bold);
+}
